@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0f172a;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), transparent 36rem),
+    radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.08), transparent 32rem),
+    #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer components {
+  .cyber-card {
+    @apply rounded-2xl border border-cyber-border/80 bg-cyber-panel/80 p-5 shadow-glow backdrop-blur;
+  }
+
+  .cyber-input {
+    @apply w-full rounded-xl border border-cyber-border bg-slate-950/50 px-4 py-2.5 text-sm text-cyber-text outline-none transition focus:border-cyber-cyan focus:ring-2 focus:ring-cyber-cyan/20;
+  }
+
+  .cyber-button {
+    @apply rounded-xl bg-cyber-cyan px-4 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-sky-300;
+  }
+
+  .cyber-button-secondary {
+    @apply rounded-xl border border-cyber-border px-4 py-2.5 text-sm font-semibold text-cyber-text transition hover:border-cyber-cyan hover:text-cyber-cyan;
+  }
+}
